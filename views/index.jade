@@ -1,21 +1,26 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  div#container
-  script(type='text/javascript').
-    $.post('http://shanghaicity.openservice.kankanews.com/public/bus/get', {idnum: "129·"}, function (response) {
-      //$("#mask,#loader").hide();
-      $('#xc').html('');
-      var data = JSON.parse(response);
-      //alert(data);
-      if (data.mes != '') {
-        $('#error').html(data.mes);
-        $('#error').show();
-        return false;
-      }
-      $("#container").html(data.sid);
-      //location.href ="/public/bus/mes/" + data.sid;
-      //location.href = "/public/bus/mes/sid/" + data.sid;
-    });
+    h1 ShangHai bus info
+    div#container
+        table
+            tr
+                th Line
+                th Direction
+                th Status
+            tr
+                td 129
+                td 0
+                td #{status}
+            tr
+                td 129
+                td 1
+                td #{status}
+            tr
+                td 106
+                td 0
+                td #{status}
+            tr
+                td 106
+                td 1
+                td #{status}

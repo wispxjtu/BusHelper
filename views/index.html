@@ -1,14 +1,1 @@
-<!DOCTYPE html><html><head><title></title><script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script><link rel="stylesheet" href="./stylesheets/style.css"></head><body><h1></h1><p>Welcome to </p><div id="container"></div><script type="text/javascript">$.post('http://shanghaicity.openservice.kankanews.com/public/bus/get', {idnum: "129·"}, function (response) {
-  //$("#mask,#loader").hide();
-  $('#xc').html('');
-  var data = JSON.parse(response);
-  //alert(data);
-  if (data.mes != '') {
-    $('#error').html(data.mes);
-    $('#error').show();
-    return false;
-  }
-  $("#container").html(data.sid);
-  //location.href ="/public/bus/mes/" + data.sid;
-  //location.href = "/public/bus/mes/sid/" + data.sid;
-});</script></body></html>
+<!DOCTYPE html><html><head><title></title><script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script><link rel="stylesheet" href="./stylesheets/style.css"></head><body><h1>ShangHai bus info</h1><div id="container"><table><tr><th>Line</th><th>Direction</th><th>Status</th></tr><tr><td>129</td><td>0</td><td></td></tr><tr><td>129</td><td>1</td><td></td></tr><tr><td>106</td><td>0</td><td></td></tr><tr><td>106</td><td>1</td><td></td></tr></table></div></body></html>
