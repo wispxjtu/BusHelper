@@ -59,8 +59,8 @@ function getStop(callback){
             console.log("stopInfoText: " + chunk);
         });
         resStop.on('end', function(){
-            var data = JSON.parse(stopInfoText);
-            //var data = dataall[0];
+            var dataall = JSON.parse(stopInfoText);
+            var data = dataall[0] || dataall;
 
             if(typeof(data)=="undefined"){
                 stopInfo = '等待发车';
