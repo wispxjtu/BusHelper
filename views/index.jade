@@ -2,25 +2,17 @@ extends layout
 
 block content
     h1 ShangHai bus info
-    div#container
-        table
+    div#container.col-md-6
+        table.table
             tr
                 th Line
                 th Direction
                 th Status
             tr
-                td 129
+                td #{status[0].line}
                 td 0
-                td #{status}
+                td #{status[0].stopInfo}
             tr
-                td 129
-                td 1
-                td #{status}
-            tr
-                td 106
+                td #{status[1].line}
                 td 0
-                td #{status}
-            tr
-                td 106
-                td 1
-                td #{status}
+                td #{status[1].stopInfo}
