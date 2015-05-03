@@ -69,6 +69,7 @@ function getStop(line, stop, direction, callback){
 }
 
 router.get('/', function(req, res, next) {
+    stopInfoArray = [];
     getStop("129路", "12.", "0", function(){
         getStop("106路", "10.", "0", function() {
             //res.setHeader('Content-Type', 'application/json; charset=utf-8');
